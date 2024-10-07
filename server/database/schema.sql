@@ -1,12 +1,21 @@
-create table user (
-  id int unsigned primary key auto_increment not null,
-  email varchar(255) not null unique,
-  password varchar(255) not null
+CREATE TABLE Auteur (
+    id_auteur INT PRIMARY KEY AUTO_INCREMENT,
+    nom VARCHAR(100) NOT NULL,
+    prenom VARCHAR(100),
+    date_naissance DATE,
 );
 
-create table item (
-  id int unsigned primary key auto_increment not null,
-  title varchar(255) not null,
-  user_id int unsigned not null,
-  foreign key(user_id) references user(id)
+CREATE TABLE Genre (
+    id_genre INT PRIMARY KEY AUTO_INCREMENT,
+    nom_genre VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE Manga (
+    id_manga INT PRIMARY KEY AUTO_INCREMENT,
+    titre VARCHAR(255) NOT NULL,
+    résumé TEXT,
+    date_publication DATE,
+    couverture_image VARCHAR(255),
+    auteur_id INT FOREIGN KEY,
+    genre_id INT FOREIGN KEY,
 );
