@@ -8,6 +8,20 @@ CREATE TABLE user (
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
 
+INSERT INTO
+    user (
+        username,
+        password,
+        email,
+        role
+    )
+VALUES (
+        'Zeno-sama',
+        '$argon2id$v=19$m=65536,t=3,p=4$7oqIRHp1C2WnBs4ix4WLnQ$0dsyOUHiCwkCRA7rScGNN7GGyu/I1Xp2rf68BtyAqgk',
+        'guillaume@gmail.com',
+        'admin'
+    );
+
 CREATE TABLE author (
     author_id INT PRIMARY KEY AUTO_INCREMENT,
     last_name VARCHAR(100) NOT NULL,
