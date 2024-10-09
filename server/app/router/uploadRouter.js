@@ -6,7 +6,7 @@ const { v4: uuidv4 } = require("uuid");
 const path = require("path");
 
 const { add } = require("../controllers/uploadActions");
-// const { verifyToken } = require("../services/auth");
+const { verifyToken } = require("../services/auth");
 
 const router = express.Router();
 
@@ -24,6 +24,6 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage });
 
-router.post("/", upload.single("file"), add);
+router.post("/", verifyToken, upload.single("file"), add);
 
 module.exports = router;
