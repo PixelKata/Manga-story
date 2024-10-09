@@ -86,10 +86,10 @@ app.use(express.json());
 
 const path = require("path");
 
-// const router = require("./router");
+const router = require("./router");
 
 // Mount the API router under the "/api" endpoint
-// app.use("/api", router);
+app.use("/api", router);
 
 /* ************************************************************************* */
 
