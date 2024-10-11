@@ -8,7 +8,7 @@ export default function Navbar() {
     <nav>
       <section>
         <Link to="/">Accueil</Link>
-        <Link to="/">Manga</Link>
+        <Link to="/all-mangas">Manga</Link>
       </section>
       <MenuBurger />
       <div className="search_box">

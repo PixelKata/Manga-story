@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import App from "./App";
 import Home from "./pages/Homepage";
+import AllMangas from "./pages/AllMangas";
 
 import "./styles/main.css";
 import fetchManga from "./services/requestManga";
@@ -16,6 +17,11 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+        loader: fetchManga,
+      },
+      {
+        path: "/all-mangas",
+        element: <AllMangas />,
         loader: fetchManga,
       },
     ],
