@@ -1,0 +1,122 @@
+.footer-container {
+  text-align: center;
+  width: 100%;
+  background-color: var(--primary-red);
+}
+.footer-container h2 {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: var(--primary-white);
+  font-family: var(--lorem-font);
+  padding-top: 1rem;
+}
+
+.newsletter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.newsletter input[type="email"] {
+  width: 60%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+}
+.newsletter button {
+  width: 60%;
+  padding: 10px;
+  background-color: var(--primary-white);
+  color: var(--primary-red);
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.footer-container button:hover {
+  background-color: var(--primary-white);
+}
+
+hr {
+  width: 50%;
+  margin: auto;
+}
+
+.Help {
+  margin: 20px 0;
+}
+.Help h3 {
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: var(--primary-white);
+  font-family: var(--lorem-font);
+}
+.Help p {
+  font-size: 14px;
+  margin: 5px 0;
+  color: var(--primary-white);
+  font-family: var(--lorem-font);
+}
+
+.About {
+  margin: 20px 0;
+}
+
+.About h3 {
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: var(--primary-white);
+  font-family: var(--lorem-font);
+}
+
+.About p {
+  font-size: 14px;
+  margin: 5px 0;
+  color: var(--primary-white);
+  font-family: var(--lorem-font);
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 3.5rem;
+  padding: 2rem;
+}
+.social-icons a {
+  color: var(--primary-white);
+  font-size: 24px;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  .footer-container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  .Help-about {
+    padding-left: 7rem;
+  }
+
+  .newsletter {
+    display: flex;
+    align-items: flex-start;
+    padding: 3rem 3rem 3rem 0rem;
+  }
+  .newsletter input[type="email"] {
+    width: 100%;
+  }
+  .newsletter button {
+    width: 100%;
+  }
+  .social-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+  .social-icons img {
+    width: 80%;
+  }
+}
