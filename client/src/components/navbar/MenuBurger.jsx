@@ -21,7 +21,7 @@ export default function MenuNavbar() {
             <img src={Close} alt="Close" />
           </button>
           <Link to="/">Accueil</Link>
-          <Link to="/">Manga</Link>
+          <Link to="/all-mangas">Manga</Link>
           <Link to="/register">Inscription</Link>
           <Link to="/login">
             <button type="button">Connexion</button>

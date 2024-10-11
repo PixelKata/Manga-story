@@ -1,0 +1,52 @@
+.All-mangas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.All-mangas h1 {
+  color: var(--primary-white);
+  font-family: var(--title-font);
+  letter-spacing: 0.1rem;
+}
+
+.Filter select {
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
+  font-size: 1rem;
+  cursor: pointer;
+  font-family: var(--lorem-font);
+}
+
+.Filter select option {
+  font-family: var(--lorem-font);
+}
+
+.Mangas-list {
+  gap: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.Mangas-list img {
+  max-width: 100%;
+}
+
+.Mangas {
+  padding-top: 1rem;
+}
+
+.Mangas p {
+  font-family: var(--lorem-font);
+  color: var(--primary-white);
+  padding-top: 1rem;
+}
+
+@media (min-width: 768px) {
+  .Mangas-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
+  }
+}
