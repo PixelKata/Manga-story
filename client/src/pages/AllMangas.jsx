@@ -50,7 +50,7 @@ export default function AllMangas() {
               <p>
                 {manga.title}
                 <br />
-                Vol. 1
+                Vol.{manga.volume_number}
               </p>
             </div>
           ))

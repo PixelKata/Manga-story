@@ -7,9 +7,10 @@ class MangaRepository extends AbstractRepository {
 
   async create(manga) {
     const [result] = await this.database.query(
-      `INSERT INTO ${this.table} (title, summary, publication_date, cover_image, author_id, genre_id) VALUES (?, ?, ?, ?, ?, ?)`,
+      `INSERT INTO ${this.table} (title, volume_number, summary, publication_date, cover_image, author_id, genre_id) VALUES (?, ?, ?, ?, ?, ?, ?)`,
       [
         manga.title,
+        manga.volume_number,
         manga.summary,
         manga.publication_date,
         manga.cover_image,
@@ -35,9 +36,10 @@ class MangaRepository extends AbstractRepository {
 
   async update(id, manga) {
     const [result] = await this.database.query(
-      `UPDATE ${this.table} SET title = ?, summary = ?, publication_date = ?, cover_image = ?, author_id = ?, genre_id = ? WHERE manga_id = ?`,
+      `UPDATE ${this.table} SET title = ?, volume_number = ?, summary = ?, publication_date = ?, cover_image = ?, author_id = ?, genre_id = ? WHERE manga_id = ?`,
       [
         manga.title,
+        manga.volume_number,
         manga.summary,
         manga.publication_date,
         manga.cover_image,
