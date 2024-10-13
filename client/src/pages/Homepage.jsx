@@ -19,7 +19,7 @@ export default function Homepage() {
             />
           )}
           <p>{randomManga?.summary}</p>
-          <Link to="/">
+          <Link to={`/manga-description/${randomManga.manga_id}`}>
             <button type="button">Voir plus</button>
           </Link>
         </div>
@@ -29,7 +29,7 @@ export default function Homepage() {
         <div className="manga-list">
           {mangas.slice(0, 5).map((manga) => (
             <div className="manga" key={manga.manga_id}>
-              <Link to="/">
+              <Link to={`/manga-description/${manga.manga_id}`}>
                 <img
                   src={`${import.meta.env.VITE_API_URL}/${manga.cover_image}`}
                   alt={manga.title}
