@@ -10,6 +10,10 @@ export default function MenuNavbar() {
     setMenuOpen((oldState) => !oldState);
   };
 
+  const handleCloseMenu = () => {
+    setMenuOpen(false);
+  };
+
   return (
     <div className="menu">
       <button type="button" onClick={handleMenu}>
@@ -20,10 +24,16 @@ export default function MenuNavbar() {
           <button type="button" onClick={handleMenu}>
             <img src={Close} alt="Close" />
           </button>
-          <Link to="/">Accueil</Link>
-          <Link to="/all-mangas">Manga</Link>
-          <Link to="/register">Inscription</Link>
-          <Link to="/login">
+          <Link to="/" onClick={handleCloseMenu}>
+            Accueil
+          </Link>
+          <Link to="/all-mangas" onClick={handleCloseMenu}>
+            Manga
+          </Link>
+          <Link to="/register" onClick={handleCloseMenu}>
+            Inscription
+          </Link>
+          <Link to="/login" onClick={handleCloseMenu}>
             <button type="button">Connexion</button>
           </Link>
         </section>
