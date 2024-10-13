@@ -85,6 +85,11 @@ form.auth > a {
   color: var(--primary-white);
 }
 
+.error {
+  font-family: var(--lorem-font);
+  color: var(--primary-white);
+}
+
 @media (max-width: 768px) {
   form.auth {
     width: 24rem;
