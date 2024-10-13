@@ -3,10 +3,13 @@ import ReactDOM from "react-dom/client";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
+import { AuthProvider } from "./context/authContext";
 import App from "./App";
 import Home from "./pages/Homepage";
 import AllMangas from "./pages/AllMangas";
 import MangaDescription from "./pages/MangaDescription";
+import Register from "./pages/Register";
+import Login from "./pages/Login";
 
 import "./styles/main.css";
 import fetchManga from "./services/requestManga";
@@ -31,6 +34,14 @@ const router = createBrowserRouter([
         element: <MangaDescription />,
         loader: async ({ params }) => fetchMangaAuthor(params.id),
       },
+      {
+        path: "/register",
+        element: <Register />,
+      },
+      {
+        path: "/login",
+        element: <Login />,
+      },
     ],
   },
 ]);
@@ -39,6 +50,8 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
   </React.StrictMode>
 );

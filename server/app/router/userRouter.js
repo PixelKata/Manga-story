@@ -5,6 +5,8 @@ const userActions = require("../controllers/userActions");
 
 const { hashPassword, verifyToken } = require("../services/auth");
 
+router.get("/profile", verifyToken, userActions.read);
+
 router.get("/", userActions.browse);
 router.get("/:id", userActions.read);
 router.post("/", hashPassword, userActions.add);
