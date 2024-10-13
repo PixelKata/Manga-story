@@ -38,7 +38,7 @@ export default function Homepage() {
               <p>
                 {manga.title}
                 <br />
-                Vol. 1
+                Vol.{manga.volume_number}
               </p>
             </div>
           ))}

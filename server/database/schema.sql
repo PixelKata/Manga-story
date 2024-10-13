@@ -100,6 +100,7 @@ VALUES ('Shonen'),
 CREATE TABLE manga (
     manga_id INT PRIMARY KEY AUTO_INCREMENT,
     title VARCHAR(255) NOT NULL,
+    volume_number INT,
     summary TEXT,
     publication_date DATE,
     cover_image VARCHAR(255),
@@ -112,6 +113,7 @@ CREATE TABLE manga (
 INSERT INTO
     manga (
         title,
+        volume_number,
         summary,
         publication_date,
         cover_image,
@@ -120,6 +122,7 @@ INSERT INTO
     )
 VALUES (
         'Berserk',
+        1,
         'Les aventures sombres et brutales de Guts, un mercenaire au destin tragique.',
         '1989-08-25',
         'berserk.png',
@@ -128,6 +131,7 @@ VALUES (
     ),
     (
         'Sword Art Online',
+        1,
         'Les aventures des joueurs piégés dans un jeu de réalité virtuelle où la mort est définitive.',
         '2009-04-10',
         'sao.png',
@@ -136,6 +140,7 @@ VALUES (
     ),
     (
         'Death Note',
+        1,
         'Un cahier surnaturel qui permet à son utilisateur de tuer quiconque en connaît le nom.',
         '2003-12-01',
         'death_note.png',
@@ -144,6 +149,7 @@ VALUES (
     ),
     (
         'Tokyo Ghoul',
+        7,
         'Un étudiant se transforme en demi-goule après une attaque et doit apprendre à vivre entre deux mondes.',
         '2011-09-08',
         'tokyo_ghoul.png',
@@ -152,6 +158,7 @@ VALUES (
     ),
     (
         'Demon Slayer',
+        3,
         'Un jeune garçon cherche à sauver sa sœur et se venger des démons après que sa famille ait été massacrée.',
         '2016-02-15',
         'demon_slayer.png',
@@ -160,6 +167,7 @@ VALUES (
     ),
     (
         'Dragon Ball Z',
+        1,
         'Suite de Dragon Ball, Goku et ses amis combattent des ennemis encore plus puissants.',
         '1989-04-26',
         'dragon_ball_z.png',
@@ -168,6 +176,7 @@ VALUES (
     ),
     (
         'Naruto Shippuden',
+        71,
         'La suite de Naruto, suivant son voyage pour devenir un ninja puissant et sauver ses amis.',
         '2007-02-15',
         'naruto_shippuden.png',
@@ -176,6 +185,7 @@ VALUES (
     ),
     (
         'L\'Attaque des Titans',
+        1,
         'L''humanité lutte pour sa survie contre des titans gigantesques.',
         '2009-09-09',
         'attaque_des_titans.png',
