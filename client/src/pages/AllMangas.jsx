@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import "../styles/allmanga.css";
 
@@ -43,10 +43,12 @@ export default function AllMangas() {
         {filteredMangas.length > 0 ? (
           filteredMangas.map((manga) => (
             <div key={manga.manga_id} className="Mangas">
-              <img
-                src={`${import.meta.env.VITE_API_URL}/${manga.cover_image}`}
-                alt={manga.title}
-              />
+              <Link to={`/manga-description/${manga.manga_id}`}>
+                <img
+                  src={`${import.meta.env.VITE_API_URL}/${manga.cover_image}`}
+                  alt={manga.title}
+                />
+              </Link>
               <p>
                 {manga.title}
                 <br />

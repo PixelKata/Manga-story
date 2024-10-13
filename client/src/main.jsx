@@ -6,9 +6,11 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App";
 import Home from "./pages/Homepage";
 import AllMangas from "./pages/AllMangas";
+import MangaDescription from "./pages/MangaDescription";
 
 import "./styles/main.css";
 import fetchManga from "./services/requestManga";
+import fetchMangaAuthor from "./services/requestAuthorManga";
 
 const router = createBrowserRouter([
   {
@@ -23,6 +25,11 @@ const router = createBrowserRouter([
         path: "/all-mangas",
         element: <AllMangas />,
         loader: fetchManga,
+      },
+      {
+        path: "/manga-description/:id",
+        element: <MangaDescription />,
+        loader: async ({ params }) => fetchMangaAuthor(params.id),
       },
     ],
   },
