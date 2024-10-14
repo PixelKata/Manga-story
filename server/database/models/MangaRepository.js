@@ -60,6 +60,14 @@ class MangaRepository extends AbstractRepository {
     );
     return result.affectedRows;
   }
+
+  async searchByTitle(title) {
+    const [rows] = await this.database.query(
+      `SELECT id, title, FROM ${this.table} WHERE title LIKE ?`,
+      [`%${title}%`]
+    );
+    return rows;
+  }
 }
 
 module.exports = MangaRepository;
