@@ -2,7 +2,15 @@ const tables = require("../../database/tables");
 
 const browse = async (req, res, next) => {
   try {
-    const mangas = await tables.manga.readAll();
+    const { search } = req.query;
+    let mangas;
+
+    if (search) {
+      mangas = await tables.manga.searchByTitle(search);
+    } else {
+      mangas = await tables.manga.readAll();
+    }
+
     if (mangas.length) {
       res.json({ result: mangas });
     } else {
